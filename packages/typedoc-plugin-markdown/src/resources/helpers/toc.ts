@@ -24,7 +24,7 @@ export default function (theme: MarkdownTheme) {
           (child) =>
             `- [${escapeChars(child.name)}](${Handlebars.helpers.relativeURL(
               child.url,
-            )})`,
+            )}) ${getCommentsAsString(child)}`,
         );
         md.push(children.join('\n'));
       }
@@ -54,4 +54,28 @@ export default function (theme: MarkdownTheme) {
       return md.length > 0 ? md.join('\n') : null;
     },
   );
+}
+
+function getCommentsAsString(child) {
+  const typedocComments = new Set();
+
+  if (!child.signatures && child.comment) {
+      typedocComments.add(child.comment);
+  } else if (child.signatures) {
+      for (const signature of child.signatures) {
+          if (signature.comment)
+              typedocComments.add(signature.comment);
+      }
+  }
+
+  if (typedocComments.size < 1) return "";
+
+
+  let allDeclarationCommentsString = "--- ";
+  for (const comment of typedocComments) {
+      const commentData = Handlebars.helpers.comments(comment);
+      allDeclarationCommentsString += commentData;
+  }
+
+  return allDeclarationCommentsString;
 }
