@@ -339,12 +339,6 @@ export class MarkdownTheme extends Theme {
         template: this.getReflectionTemplate(),
       },
       {
-        kind: [ReflectionKind.Class],
-        isLeaf: false,
-        directory: 'classes',
-        template: this.getReflectionTemplate(),
-      },
-      {
         kind: [ReflectionKind.Interface],
         isLeaf: false,
         directory: 'interfaces',
