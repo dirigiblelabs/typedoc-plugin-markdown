@@ -1,5 +1,5 @@
 {
-  "name": "typedoc-plugin-markdown",
+  "name": "dirigible-typedoc-plugin-markdown",
   "version": "3.16.0",
   "description": "A plugin for TypeDoc that enables TypeScript API documentation to be generated in Markdown.",
   "main": "dist/index.js",
@@ -20,14 +20,14 @@
   "author": "Thomas Grey",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tgreyuk/typedoc-plugin-markdown/issues"
+    "url": "https://github.com/dirigiblelabs/typedoc-plugin-markdown/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tgreyuk/typedoc-plugin-markdown.git",
+    "url": "git+https://github.com/dirigiblelabs/typedoc-plugin-markdown.git",
     "directory": "packages/typedoc-plugin-markdown"
   },
-  "homepage": "https://github.com/tgreyuk/typedoc-plugin-markdown/tree/master/packages/typedoc-plugin-markdown",
+  "homepage": "https://github.com/dirigiblelabs/typedoc-plugin-markdown/tree/master/packages/typedoc-plugin-markdown",
   "keywords": [
     "markdown",
     "typescript",
