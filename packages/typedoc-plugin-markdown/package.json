@@ -1,5 +1,5 @@
 {
-  "name": "dirigible-typedoc-plugin-markdown",
+  "name": "dirigible-typedoc-plugin-markdown_2",
   "version": "3.16.0",
   "description": "A plugin for TypeDoc that enables TypeScript API documentation to be generated in Markdown.",
   "main": "src/index.js",
