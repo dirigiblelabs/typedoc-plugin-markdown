@@ -7,7 +7,7 @@
     "dist/"
   ],
   "scripts": {
-    "lint": "eslint ./src --ext .ts",
+    "lint": "npx eslint ./src --ext .ts",
     "markdownlint": "yarn run docs:md && markdownlint ./docs/md",
     "prepublishOnly": "yarn run lint && yarn run build && yarn run test",
     "build": "rm -rf dist && tsc && copyfiles --up 1 ./src/**/*.hbs ./dist/",
