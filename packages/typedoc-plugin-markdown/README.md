@@ -1,3 +1,24 @@
+# Dirigible local testing setup
+
+## Publish npm package
+1. Ensure `package.json`` has: 
+```
+"publishConfig": {
+  "registry": "http://localhost:4873/"
+}
+``` 
+2. yarn install
+3. yarn build
+4. yarn publish
+
+## Unpublish npm package
+1. npm unpublish -f --registry http://localhost:4873
+
+## Use npm package 
+1. npm i --registry http://localhost:4873 --legacy-peer-deps
+2. npx typedoc
+
+
 # typedoc-plugin-markdown
 
 A plugin for [TypeDoc](https://github.com/TypeStrong/typedoc) that renders TypeScript API documentation as Markdown files. (By default, TypeDoc will render API documentation as a webpage, e.g. HTML files.)

@@ -1,15 +1,15 @@
 {
-  "name": "dirigible-typedoc-plugin-markdown_3",
-  "version": "3.16.0",
+  "name": "@dirigiblelabs/typedoc-plugin-markdown",
+  "version": "3.17.0",
   "description": "A plugin for TypeDoc that enables TypeScript API documentation to be generated in Markdown.",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "files": [
-    "src/"
+    "dist/"
   ],
   "scripts": {
-    "lint": "npx eslint ./src --ext .ts",
+    "lint": "eslint ./src --ext .ts",
     "markdownlint": "yarn run docs:md && markdownlint ./docs/md",
-    "prepublishOnly": "",
+    "prepublishOnly": "yarn run build",
     "build": "rm -rf dist && tsc && copyfiles --up 1 ./src/**/*.hbs ./dist/",
     "test": "jest",
     "build-and-test": "yarn run build && yarn run test",
@@ -41,5 +41,8 @@
   },
   "dependencies": {
     "handlebars": "^4.7.7"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
   }
 }
